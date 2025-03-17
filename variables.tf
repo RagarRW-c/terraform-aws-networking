@@ -13,6 +13,15 @@ variable "vpc_name" {
 
 
 variable "vpc_config" {
+
+
+  description = <<EOT
+
+  cidr_block: The CIDR block of the subnet
+  public: Wether the subnet should,,.,....
+  az:   the    
+
+EOT
   type = object({
     cidr_block = string
     name       = string

@@ -11,17 +11,17 @@ locals {
 locals {
   output_public_subnets = {
     for key in keys(local.public_subnets) : key => {
-      subnet_id = aws_subnet.this[key].id
+      subnet_id         = aws_subnet.this[key].id
       availability_zone = aws_subnet.this[key].availability_zone
     }
   }
 
   output_private_subnets = {
     for key in keys(local.private_subnets) : key => {
-      subnet_id = aws_subnet.this[key].id
+      subnet_id         = aws_subnet.this[key].id
       availability_zone = aws_subnet.this[key].availability_zone
     }
-}
+  }
 }
 
 data "aws_availability_zones" "available" {
